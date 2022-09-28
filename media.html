@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        th {
+            border: 3px solid black;
+            text-align: center;
+        }
+        a {text-decoration: none;}
+    </style>
+    <title>Media</title>
+    <h1 style="color:darkred;">Media</h1>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><a href="index.html" style="color: black;">&nbsp;Profile&nbsp;</a></th>
+            <th><a href="shopping.html" style="color: black;">&nbsp;Shopping&nbsp;</a></th>
+            <th><a href="media.html" style="color: black;">&nbsp;Media&nbsp;</a></th>
+        </tr>
+    </table><hr/>
+    <div class="center">
+    <table>
+        <tr>
+            <th style="width: 720px;">
+                <table style="text-align: center;">
+                    <tr>
+                        <th>
+                            <audio style="width: 350px;" controls>
+                                <source src="Nighcore - Shades Apart - Stranger by the Day.mp3" type="audio/mpeg">
+                            </audio>
+                        </th>
+                        <th>
+                            <audio style="width: 350px;" controls>
+                                <source src="Monochrome Overdrive.mp3" type="audio/mpeg">
+                            </audio>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Nighcore - Shades Apart - Stranger by the Day</td>
+                        <td>Monochrome Overdrive</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <video width="700px" height="450px" controls>
+                                <source src="Mahabharatab- FGO.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="t1.jpg" style="width: 350px;"></td>
+                        <td><img src="t2.jpeg" style="width: 350px;"></td>
+                    </tr>
+                </table>
+            </th>
+            <th style="width: 400px;">
+                <table>
+                    <tr>
+                        <td>
+                            <form>
+                                <fieldset>
+                                    <legend>Buku Tamu:</legend>
+                                    <label for="fnama">Nama:</label>
+                                    <input type="text" id="fnama" name="fnama"><br/>
+                                    <label for="fumur">Umur:</label>
+                                    <input type="text" id="fumur" name="fumur"><br/>
+                                    <label for="education">Pendidikan:</label>
+                                    <select id="education" name="education">
+                                    <option value="dipilih" disabled selected>Silakan Di Pilih</option>
+                                    <option value="SLTA">SLTA</option>
+                                    <option value="S1">S1</option>
+                                    <option value="S2">S2</option>
+                                    <option value="S3">S3</option>
+                                    </select><br/>
+                                    <label>Status Pernikahan: </label><br/>
+                                    <input type="radio" id="lajang" name="status" value="Lajang">
+                                    <label for="lajang">Lajang</label>
+                                    <input type="radio" id="menikah" name="status" value="Menikah">
+                                    <label for="menikah">Sudah Menikah</label><br/>
+                                    <textarea name="pesan" rows="10" cols="30">Tulis pesan dan kesanmu.</textarea><br/>
+                                    <button type="button" onclick="alert('Data Berhasil Di input!')">Submit</button> 
+                                </fieldset>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="t3.png" style="width: 400px;"></td>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
