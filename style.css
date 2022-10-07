@@ -35,6 +35,17 @@ table {
 }
 /* end */
 
+/* Judul stick */
+#header{
+	width:550px;
+	position:fixed;
+    background-color: white;
+}
+#content{
+    padding-top: 150px;
+}
+/* end */
+
 /* list tabel */
 .t2 {
     border: 0px;
