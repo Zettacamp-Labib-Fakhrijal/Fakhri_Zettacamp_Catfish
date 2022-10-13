@@ -23,8 +23,18 @@ function bp(jml, disc, tax, crd) {
             var term = [];
             for (let i = 0; i < crd; i++) {
                 term[i] = ptax / crd;
-                console.log('Pembayaran bulan ke-' + (i+1) + '= ' + term[i]);
+            };
+            let due = {
+                bulan: ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November']
             }
+            const tenggat = due.bulan.slice(0, crd);
+            console.log('Tenggat Waktu: ' + tenggat);
+            const termcrdt = [];
+            term.forEach((termn, idx, term) => {
+                const termobj = {Tagihan: idx+1, credit: termn + (termn * (tax / 100))}
+                termcrdt.push(termobj);
+            });
+            console.log(termcrdt);
         }
     } else {
         stock = 0;
@@ -32,13 +42,13 @@ function bp(jml, disc, tax, crd) {
     }
 }
 
-var jumlah = 5;
+var jumlah = 10;
 var diskon = 25;
 var pajak = 10;
-var kredit = 0;
+var kredit = 3;
 var no = 1;
-while (stock > jumlah) {
+do {
     console.log(no);
     console.log(bp(jumlah, diskon, pajak, kredit));
     no++;
-}
+} while (stock >= jumlah);
