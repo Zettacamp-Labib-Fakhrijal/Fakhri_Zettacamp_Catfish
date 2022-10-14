@@ -116,7 +116,7 @@ function groupdurasi(vardurasi) {
     // }
 }
 var artis = 'DragonForce';
-var durasi = 100;
+var durasi = 60;
 var genre = 'Pop';
 // console.log(groupartist(artis));
 // console.log(groupgenre(genre));
