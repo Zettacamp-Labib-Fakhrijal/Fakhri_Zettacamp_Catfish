@@ -1,3 +1,11 @@
+const express = require('express');
+
+const app = express();
+
+const port = 3000;
+  
+app.listen(port);
+
 var stock = 50;
 function bp(jml, disc, tax, crd) {
     const b = disc > 0 & disc < 100;
@@ -42,13 +50,41 @@ function bp(jml, disc, tax, crd) {
     }
 }
 
-var jumlah = 10;
-var diskon = 25;
-var pajak = 10;
-var kredit = 3;
-var no = 1;
-do {
-    console.log(no);
-    console.log(bp(jumlah, diskon, pajak, kredit));
-    no++;
-} while (stock >= jumlah);
+// app.use((req, res, next) => {
+//     res.send('<h1>ini judul</h1>');
+// });
+// app.use((req, res, next) => {
+//     res.send('<h1>Get World!</h1><form method="get" action="/"><input name="Jumlah" type="text"><button type="submit">Itung</button></form>');
+// });
+
+var parbook = {
+    jumlah: 10,
+    diskon: 25,
+    pajak: 10,
+    kredit: 3
+}
+app.get('/book', (req, res) => {
+    // var jml = req.params.jml;
+    // var dsc = 
+    res.send(parbook);
+});
+app.post('/', (req, res) => {
+    res.send('Post World!')
+});
+app.put('/book/:jml', (req, res) => {
+    res.send(req.params.jml)
+});
+app.delete('/book/:jml', (req, res) => {
+    res.send(req.params.jml)
+});
+
+// var jumlah = 10;
+// var diskon = 25;
+// var pajak = 10;
+// var kredit = 3;
+// var no = 1;
+// do {
+//     console.log(no);
+//     console.log(bp(jumlah, diskon, pajak, kredit));
+//     no++;
+// } while (stock >= jumlah);
